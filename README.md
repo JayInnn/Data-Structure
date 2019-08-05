@@ -1,2 +1,3 @@
 # Data-Structure
-the implemention of data structure in java
+the implemention of data structures in java
+
