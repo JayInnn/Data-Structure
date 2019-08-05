@@ -1,10 +1,10 @@
-#Data-Structure-Learning
+# Data-Structure-Learning
 the implemention of data structures in java
 
 Info: try to learn the data structure and apply to normal algorithm with java.
-Refer to the book --Fundamentals of Data Structure in C
+Refer to the book --**Fundamentals of Data Structure in C**
   
-##Chapter 1
+## Chapter 1
 1. Selection sort  
 2. Binary search: iteration and recursive  
 3. Permutation  
