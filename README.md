@@ -1,7 +1,7 @@
 # Data-Structure-Learning
 the implemention of data structures in java
 
-Info: try to learn the data structure and apply to normal algorithm with java.
+Info: try to learn the data structure and apply to normal algorithm with java.  
 Refer to the book --**Fundamentals of Data Structure in C**
   
 ## Chapter 1
