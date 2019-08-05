@@ -3,6 +3,19 @@ package Chapter1;
 import java.util.Arrays;
 import java.util.Scanner;
 
+ /**
+ * @author: yinwenjie
+ * @email: 475660997@qq.com
+ * @date: 2019/8/5
+ * @description:
+  * The SelectionSort class can sort a list by selection-sort algorithm.
+ *
+ * @result:
+  * please input the length of list:4
+  * please input the value of list:4 2 1 3
+  * before sorting list:[4, 2, 1, 3]
+  * after sorting list:[1, 2, 3, 4]
+ */
 public class SelectionSort {
     public static void sort(int[] list){
         int length = list.length;
