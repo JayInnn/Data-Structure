@@ -5,6 +5,7 @@ Info: try to learn the data structure and apply to normal algorithm with java.
 Refer to the book --**Fundamentals of Data Structure in C**
   
 ## Chapter 1
+Attention: the most important thing, in this chapter, is the difference between iteration and recursive.  
 1. Selection sort  
 2. Binary search: iteration and recursive  
 3. Permutation  
