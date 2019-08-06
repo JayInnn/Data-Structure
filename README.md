@@ -8,4 +8,8 @@ Refer to the book --**Fundamentals of Data Structure in C**
 1. Selection sort  
 2. Binary search: iteration and recursive  
 3. Permutation  
+4. **Magic square**  
 
+## Chapter 2  
+1. Sparse polynomial  
+2. Sparse matrix
