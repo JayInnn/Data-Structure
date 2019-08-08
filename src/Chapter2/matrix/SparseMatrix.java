@@ -5,6 +5,7 @@ package Chapter2.matrix;
  * @email: 475660997@qq.com
  * @date: 2019/8/6
  * @description:
+ * According to the algorithm of the book, the code is finished.
  * @result:
  *       2  0  0  3  0  1           1  0  0           3  0  0
  *       0  2  4  0  0  0           0  0  1           0  4  2
