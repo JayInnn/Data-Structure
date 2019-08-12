@@ -57,8 +57,6 @@ public class SparseMatrix {
             row = a[i].row;
             row_begin = i;
         }
-
-
         return result;
     }
 
