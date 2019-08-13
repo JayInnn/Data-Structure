@@ -20,6 +20,15 @@ in the next chapter. Finally, pattern matching algorithm for string will be intr
 3. Pattern Matching & KMP pattern matching algorithm  
 
 ## Chapter 3  
+Attention: in this chapter, to learn the ADT of stack and queue, and using array list to accomplish them.
 1. Stack  
 2. Queue & Circular queue  
 3. **the problem of maze**
+
+## Chapter 4  
+Attention: in this chapter, to introduce the linked list, and to re-accomplish stack, queue, polynomial, and matrix by linked
+list. In addition, learning to use inner class to construct node class.
+1. linked natural number  
+2. dynamic linked stack  
+3. dynamic linked queue  
+
