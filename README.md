@@ -31,4 +31,6 @@ list. In addition, learning to use inner class to construct node class.
 1. linked natural number  
 2. dynamic linked stack  
 3. dynamic linked queue  
+4. linked polynomial  
+5. linked-list's utility & circular-list's utility  
 
