@@ -5,7 +5,19 @@ package Chapter4.uti;
  * @email: 475660997@qq.com
  * @date: 2019/8/14
  * @description:
+ * In this class, adding some utilities of single linked list.
  * @result:
+ * 0  1  2  3  4
+ * Searching middle value: 2
+ * 2  3  4  5  6
+ * After concating: 0  1  2  3  4  2  3  4  5  6
+ * After inverting: 6  5  4  3  2  4  3  2  1  0
+ * Searching middle value: 2
+ * Searching the last k element: 6
+ * After inverting: 0  1  2  3  4  2  3  4  5  6
+ * After sorting: 6  5  4  4  3  3  2  2  1  0
+ * After deleteing: 6  5  4  4  2  2  1  0
+ * After printing reversely: 0  1  2  2  4  4  5  6
  */
 public class LinkedListUtility {
     private static class Node{
@@ -110,14 +122,27 @@ public class LinkedListUtility {
 
     //delete the duplicate element
     public void deleteDuplicate(int v){
-
+        Node first = new Node(-1, null);
+        first.next = list;
+        Node preNode = first;
+        Node tmp = list;
+        while (tmp != null){
+            if (tmp.value == v){
+                preNode.next = tmp.next;
+                tmp = tmp.next;
+            }else {
+                preNode = tmp;
+                tmp = tmp.next;
+            }
+        }
+        list = first.next;
     }
 
     //reversely print list by recursive
     public void printReverse(Node l){
-        if (l.next != null){
+        if (l != null){
             printReverse(l.next);
-            System.out.println(l.value + "  ");
+            System.out.print(l.value + "  ");
         }
     }
 
@@ -134,7 +159,7 @@ public class LinkedListUtility {
         LinkedListUtility listUtility2 = new LinkedListUtility();
         for (int i = 0; i < 5; i++){
             listUtility.insert(i);
-            listUtility2.insert(i + 10);
+            listUtility2.insert(i + 2);
         }
         System.out.println(listUtility);
         System.out.println("Searching middle value: " + listUtility.searchMid());
@@ -150,7 +175,10 @@ public class LinkedListUtility {
         System.out.println("After inverting: " + listUtility);
         listUtility.sort();
         System.out.println("After sorting: " + listUtility);
-
+        listUtility.deleteDuplicate(3);
+        System.out.println("After deleteing: " + listUtility);
+        System.out.print("After printing reversely: ");
+        listUtility.printReverse(listUtility.list);
 
     }
 
