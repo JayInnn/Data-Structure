@@ -33,4 +33,7 @@ list. In addition, learning to use inner class to construct node class.
 3. dynamic linked queue  
 4. linked polynomial  
 5. linked-list's utility & circular-list's utility  
+6. two-way linked list  
+7. equivalence relation  
+8. linked matrix  
 
