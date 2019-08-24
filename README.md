@@ -37,3 +37,10 @@ list. In addition, learning to use inner class to construct node class.
 7. equivalence relation  
 8. linked matrix  
 
+## Chapter 5
+1. the operations of binary tree  
+2. thread binary tree  
+3. heap(max heap & min heap)  
+4. binary search tree  
+5. selection tree  
+6. forest  
