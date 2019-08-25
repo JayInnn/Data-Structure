@@ -37,7 +37,8 @@ list. In addition, learning to use inner class to construct node class.
 7. equivalence relation  
 8. linked matrix  
 
-## Chapter 5
+## Chapter 5  
+Attention: in this chapter, to learn the tree and try to use generics programming.  
 1. the operations of binary tree  
 2. thread binary tree  
 3. heap(max heap & min heap)  
