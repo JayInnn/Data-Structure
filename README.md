@@ -39,8 +39,8 @@ list. In addition, learning to use inner class to construct node class.
 
 ## Chapter 5  
 Attention: in this chapter, to learn the tree and try to use generics programming.  
-1. the operations of binary tree  
-2. thread binary tree  
+1. binary tree  
+2. thread binary tree: **preorder**, inorder and **postorder** thread binary tree  
 3. heap(max heap & min heap)  
 4. binary search tree  
 5. selection tree  
