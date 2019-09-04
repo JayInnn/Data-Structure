@@ -44,4 +44,4 @@ Attention: in this chapter, to learn the tree and try to use generics programmin
 3. heap(max heap & min heap)  
 4. binary search tree  
 5. **selection tree**  
-6. forest: equivalence relation  
+6. forest: equivalence class  
