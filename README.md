@@ -38,7 +38,9 @@ list. In addition, learning to use inner class to construct node class.
 8. linked matrix  
 
 ## Chapter 5  
-Attention: in this chapter, to learn the tree and try to use generics programming.  
+Attention: in this chapter, to learn the tree and try to use generics programming. As binary tree, you should pay more attention on
+the ordering -- preorder, inorder, postorder and level-order. The thread tree make full use of **NULL** node to order the tree as list.
+The heap is mainly used to sort the array. The binary search tree can search the given key by half-hold. The selection tree can sort the massive data by IO. 
 1. binary tree  
 2. thread binary tree: **preorder**, inorder and **postorder** thread binary tree  
 3. heap(max heap & min heap)  
