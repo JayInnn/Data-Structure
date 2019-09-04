@@ -43,5 +43,5 @@ Attention: in this chapter, to learn the tree and try to use generics programmin
 2. thread binary tree: **preorder**, inorder and **postorder** thread binary tree  
 3. heap(max heap & min heap)  
 4. binary search tree  
-5. selection tree  
-6. forest  
+5. **selection tree**  
+6. forest: equivalence relation  
