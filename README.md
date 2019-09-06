@@ -47,3 +47,8 @@ The heap is mainly used to sort the array. The binary search tree can search the
 4. binary search tree  
 5. **selection tree**  
 6. forest: equivalence class  
+
+## Chapter 6  
+Attention: in this chapter, to learn the graph and to focus on the difference between graph and tree.  
+1. graph: dfs & bfs  
+
