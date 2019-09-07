@@ -50,5 +50,6 @@ The heap is mainly used to sort the array. The binary search tree can search the
 
 ## Chapter 6  
 Attention: in this chapter, to learn the graph and to focus on the difference between graph and tree.  
-1. graph: dfs & bfs  
-
+1. graph: dfs & bfs & spanning tree  
+2. biconnected component: articulation point & biconnected graph  
+3. minimum cost spanning tree: greedy algorithm -- Kruskal & Prim & Sollin  
