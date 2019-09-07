@@ -10,46 +10,15 @@ import java.util.LinkedList;
  * Realize the ADT of graph. The data structure of graph is adjacency lists.
  * The most important method is dfs and bfs -- they are the basic graph-ordering method.
  * @result:
- * Vertically print the graph:
- * 0  1  2
- * 1  0  3
- * 2  0  3
- * 3  1  2
- * 4  5
- * 5  4  6
- * 6  5  7
- * 7  6
- * depth first search: 0  1  3  2
- * breadth first search: 0  1  2  3
- * connected component: 0  1  3  2  /  4  5  6  7  /
- * After deleting the edge -- E<0, 1>.  Vertically print the graph:
- * 0  2
- * 1  3
- * 2  0  3
- * 3  1  2
- * 4  5
- * 5  4  6
- * 6  5  7
- * 7  6
- * After deleting the vertex -- V<0>.  Vertically print the graph:
- * 1  3
- * 2  3
- * 3  1  2
- * 4  5
- * 5  4  6
- * 6  5  7
- * 7  6
  */
 public class Graph {
     static class Node {
         int vertex;
         Node link;
-
         Node(int vertex, Node link){
             this.vertex = vertex;
             this.link = link;
         }
-
         Node(int vertex){
             this(vertex, null);
         }
@@ -118,14 +87,30 @@ public class Graph {
     }
 
     public void adjacent(int vertex){
+        System.out.print("the adjacent vertex of V(" + vertex  +"): ");
         Node tmp = graph[vertex];
         while (tmp.link != null){
             tmp = tmp.link;
-            System.out.print(tmp + "  ");
+            System.out.print(tmp.vertex + "  ");
         }
+        System.out.println();
     }
 
-    public void dfs(int vertex){
+    public void depthFirstSearch(int vertex){
+        System.out.print("depth first search: ");
+        initVisited();
+        dfs(vertex);
+        System.out.println();
+    }
+
+    public void breadthFirstSearch(int vertex){
+        System.out.print("breadth first search: ");
+        initVisited();
+        bfs(vertex);
+        System.out.println();
+    }
+
+    private void dfs(int vertex){
         visited[vertex] = true;
         System.out.print(vertex + "  ");
         for (Node tmp = graph[vertex]; tmp != null; tmp = tmp.link)
@@ -133,12 +118,7 @@ public class Graph {
                 dfs(tmp.vertex);
     }
 
-    public void initVisited(){
-        for (int i = 0; i < vSize; i++)
-            visited[i] = false;
-    }
-
-    public void bfs(int vertex){
+    private void bfs(int vertex){
         System.out.print(vertex + "  ");
         queue.offer(vertex);
         visited[vertex] = true;
@@ -153,7 +133,19 @@ public class Graph {
         }
     }
 
-    public void connected(){
+    private void initVisited(){
+        for (int i = 0; i < vSize; i++)
+            visited[i] = false;
+    }
+
+    public void connectedComponent(){
+        System.out.print("connected component: ");
+        initVisited();
+        connected();
+        System.out.println();
+    }
+
+    private void connected(){
         for (int i = 0; i < vSize; i++){
             if (!visited[i]){
                 dfs(i);
@@ -161,6 +153,17 @@ public class Graph {
             }
         }
     }
+
+    public Graph dfst(Graph graph){
+
+        return null;
+    }
+
+    public void bfst(){}
+
+    public void articulationPoint(){}
+
+    public void bicon(){}
 
     public void printGraph(){
         System.out.println("Vertically print the graph:");
@@ -182,28 +185,17 @@ public class Graph {
         for (int i = 0; i < edge.length; i++)
             graph.insertEdge(edge[i][0], edge[i][1]);
         graph.printGraph();
-
-        System.out.print("depth first search: ");
-        graph.dfs(0);
-        System.out.println();
-
-        graph.initVisited();
-
-        System.out.print("breadth first search: ");
-        graph.bfs(0);
-        System.out.println();
-
-        graph.initVisited();
-
-        System.out.print("connected component: ");
-        graph.connected();
-        System.out.println();
-
+        graph.adjacent(5);
+        graph.depthFirstSearch(0);
+        graph.breadthFirstSearch(0);
+        graph.connectedComponent();
         System.out.print("After deleting the edge -- E<0, 1>.  ");
         graph.deleteEdge(0,1);
         graph.printGraph();
         System.out.print("After deleting the vertex -- V<0>.  ");
         graph.deleteVertex(0);
         graph.printGraph();
+
+
     }
 }
