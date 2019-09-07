@@ -8,7 +8,8 @@ import java.util.LinkedList;
  * @date: 2019/9/6
  * @description:
  * Realize the ADT of graph. The data structure of graph is adjacency lists.
- * The most important method is dfs and bfs -- they are the basic graph-ordering method.
+ * The most important method is dfs and bfs -- they are the basic graph-ordering method and dfst, bfst is based on them.
+ * In addition, the biconnected graph also uses the spanning tree.
  * @result:
  */
 public class Graph {
@@ -154,12 +155,45 @@ public class Graph {
         }
     }
 
-    public Graph dfst(Graph graph){
-
-        return null;
+    public Graph depthFirstSpanningTree(){
+        Graph newGraph = new Graph(vSize);
+        initVisited();
+        dfst(0, newGraph);
+        return newGraph;
     }
 
-    public void bfst(){}
+    private void dfst(int vertex, Graph newGraph){
+        newGraph.insertVertex(vertex);
+        visited[vertex] = true;
+        for (Node tmp = graph[vertex]; tmp != null; tmp = tmp.link)
+            if (!visited[tmp.vertex]){
+                dfst(tmp.vertex, newGraph);
+                newGraph.insertEdge(vertex, tmp.vertex);
+            }
+    }
+
+    public Graph breadthFirstSpanningTree(){
+        Graph newGraph = new Graph(vSize);
+        initVisited();
+        bfst(0, newGraph);
+        return newGraph;
+    }
+
+    private void bfst(int vertex, Graph newGraph){
+        queue.offer(vertex);
+        visited[vertex] = true;
+        newGraph.insertVertex(vertex);
+        while (queue.size() != 0){
+            int v = queue.poll();
+            for (Node tmp = graph[v]; tmp != null; tmp = tmp.link)
+                if (!visited[tmp.vertex]){
+                    queue.offer(tmp.vertex);
+                    visited[tmp.vertex] = true;
+                    newGraph.insertVertex(tmp.vertex);
+                    newGraph.insertEdge(v, tmp.vertex);
+                }
+        }
+    }
 
     public void articulationPoint(){}
 
@@ -196,6 +230,19 @@ public class Graph {
         graph.deleteVertex(0);
         graph.printGraph();
 
+        System.out.println("==============================================");
+        Graph graph1 = new Graph(8);
+        int[] vertex1 = {0,1,2,3,4,5,6,7};
+        int[][] edge1 = {{0,1},{0,2},{1,3},{1,4},{2,5},{2,6},{3,7},{4,7},{5,7},{6,7}};
+        for (int i = 0; i < vertex1.length; i++)
+            graph1.insertVertex(vertex1[i]);
+        for (int i = 0; i < edge1.length; i++)
+            graph1.insertEdge(edge1[i][0], edge1[i][1]);
+        graph1.printGraph();
+        System.out.print("depth first spanning tree. ");
+        graph1.depthFirstSpanningTree().printGraph();
+        System.out.print("breadth first spanning tree. ");
+        graph1.breadthFirstSpanningTree().printGraph();
 
     }
 }
