@@ -1,5 +1,6 @@
 package Chapter6;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.LinkedList;
  * @description:
  * Realize the ADT of graph. The data structure of graph is adjacency lists.
  * The most important method is dfs and bfs -- they are the basic graph-ordering method and dfst, bfst is based on them.
- * In addition, the biconnected graph also uses the spanning tree.
+ * In addition, the problem of biconnected graph is articulation point and biconnected component.
  * @result:
  */
 public class Graph {
@@ -195,9 +196,67 @@ public class Graph {
         }
     }
 
-    public void articulationPoint(){}
+    public void articulationPoint(){
+        int[] dfn = new int[vSize];
+        int[] low = new int[vSize];
+        for (int i = 0; i < vSize; i++)
+            dfn[i] = low[i] = -1;
+        //dfnlow
+        vSize = 0;
+        dfnlow(3, -1, dfn, low);
+        System.out.println("dfn[]: " + Arrays.toString(dfn));
+        System.out.println("low[]: " + Arrays.toString(low));
+        //traversing dfn and low
+    }
 
-    public void bicon(){}
+    public void biconnectedComponent(){
+        int[] dfn = new int[vSize];
+        int[] low = new int[vSize];
+        for (int i = 0; i < vSize; i++)
+            dfn[i] = low[i] = -1;
+        vSize = 0;
+        bicon(3, -1, dfn, low);
+    }
+
+    private void dfnlow(int u, int v, int[] dfn, int[] low){
+        dfn[u] = low[u] = vSize++;
+        for (Node tmp = graph[u]; tmp != null; tmp = tmp.link){
+            int w = tmp.vertex;
+            if (dfn[w] < 0){
+                dfnlow(w, u, dfn, low);
+                low[u] = low[u] < low[w] ? low[u] : low[w];
+            }else if (w != v){
+                low[u] = low[u] < dfn[w] ? low[u] : dfn[w];
+            }
+        }
+    }
+
+    private void bicon(int u, int v, int[] dfn, int[] low){
+        dfn[u] = low[u] = vSize++;
+        for (Node tmp = graph[u]; tmp != null; tmp = tmp.link){
+            int w = tmp.vertex;
+            if (v != w && dfn[w] < dfn[u]){     //add the back edge
+                queue.push(u);
+                queue.push(w);
+                if (dfn[w] < 0){
+                    bicon(w, u, dfn, low);
+                    low[u] = low[u] < low[w] ? low[u] : low[w];
+                    if (low[w] >= dfn[u]){
+                        System.out.print("New biconnected component: ");
+                        int x = 0, y = 0;
+                        do {
+                            x = queue.pop();
+                            y = queue.pop();
+                            System.out.print(" <" + x + ", " + y + ">");
+                        }while (!((y == u) && (x == w)));
+                        System.out.println();
+                    }
+                }else if (w != v){
+                    low[u] = low[u] < dfn[w] ? low[u] : dfn[w];
+                }
+            }
+        }
+    }
 
     public void printGraph(){
         System.out.println("Vertically print the graph:");
@@ -244,5 +303,16 @@ public class Graph {
         System.out.print("breadth first spanning tree. ");
         graph1.breadthFirstSpanningTree().printGraph();
 
+        System.out.println("==============================================");
+        Graph graph2 = new Graph(10);
+        int[] vertex2 = {0,1,2,3,4,5,6,7,8,9};
+        int[][] edge2 = {{0,1},{1,2},{2,4},{3,4},{1,3},{3,5},{5,6},{5,7},{6,7},{7,9},{7,8}};
+        for (int i = 0; i < vertex2.length; i++)
+            graph2.insertVertex(vertex2[i]);
+        for (int i = 0; i < edge2.length; i++)
+            graph2.insertEdge(edge2[i][0], edge2[i][1]);
+        graph2.printGraph();
+        graph2.articulationPoint();
+        graph2.biconnectedComponent();
     }
 }
