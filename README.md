@@ -43,13 +43,13 @@ the ordering -- preorder, inorder, postorder and level-order. The thread tree ma
 The heap is mainly used to sort the array. The binary search tree can search the given key by half-hold. The selection tree can sort the massive data by IO. 
 1. binary tree  
 2. thread binary tree: **preorder**, inorder and **postorder** thread binary tree  
-3. heap(max heap & min heap)  
+3. heap: max heap & min heap  
 4. binary search tree  
 5. **selection tree**  
 6. forest: equivalence class  
 
 ## Chapter 6  
-Attention: in this chapter, to learn the graph and to focus on dfs & bfs. And I find that the part of biconnected graph, in the book -- page 278-279, has some errors, for example coding 6-4 & 6-6. The articulation point and biconnected component is caclulating by graph but not the spanning tree of graph.  
+Attention: in this chapter, to learn the graph and to focus on dfs & bfs. And I find that the part of biconnected graph, in the book -- page 278-279, has some errors, for example coding 6-4 & 6-6. The articulation point and biconnected component is caclulating by graph but not the spanning tree of graph. Then, to introduce the application of graph -- minimum cost spanning tree & the shortest path & activity network.     
 1. graph: dfs & bfs & spanning tree  
 2. biconnected component: articulation point & biconnected graph  
 3. minimum cost spanning tree: greedy algorithm -- Kruskal & Prim & **Sollin**  
