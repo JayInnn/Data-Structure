@@ -56,3 +56,9 @@ Attention: in this chapter, to learn the graph and to focus on dfs & bfs. And I 
 4. the shortest path and transitive closure: dijkstra & allcosts algorithm  
 5. AOV: topological order
 6. AOE: earliest time & latest time  
+
+## Chapter 7  
+Attention: in this chapter, to pay more attention on sorting. Effective sorting method can obviously improve the speed of searching and verifying.  
+1. search & verify
+2. internal sort: insertion sort & quick sort  
+3. external sort  
