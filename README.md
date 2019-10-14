@@ -60,5 +60,10 @@ Attention: in this chapter, to learn the graph and to focus on dfs & bfs. And I 
 ## Chapter 7  
 Attention: in this chapter, to pay more attention on sorting. Effective sorting method can obviously improve the speed of searching and verifying.  
 1. search & verify
-2. internal sort: insertion sort & quick sort  
-3. external sort  
+2. internal sort: insertion sort & quick sort & merge sort & radix sort  
+3. external sort: merge k sorted arrays  
+
+## Chapter 8
+Attention: in this chapter, to focus on hashing.  
+1. static hashing  
+2. dynamic hashing  
