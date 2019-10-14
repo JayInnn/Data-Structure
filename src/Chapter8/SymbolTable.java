@@ -4,7 +4,7 @@ package Chapter8;
  * @author: yinwenjie
  * @email: 475660997@qq.com
  * @date: 2019/10/14
- * @description:
+ * @description: to realise the ADT of symbol table by chaining.
  * @result:
  */
 public class SymbolTable<K, V> {
