@@ -64,6 +64,9 @@ Attention: in this chapter, to pay more attention on sorting. Effective sorting 
 3. external sort: merge k sorted arrays  
 
 ## Chapter 8
-Attention: in this chapter, to focus on hashing.  
-1. static hashing  
-2. dynamic hashing  
+Attention: in this chapter, to focus on hashing. Hashing includes static hashing and dynamic hashing. Static hashing's application scenario is that hash-entry can be loaded to memory, but hash-entry of dynamic hashing can not be totally loaded to memory. As for handleing overflow or collision, linear open addressing & chainging can be applied to static hashing and directory & deirectoryless hashing can be used in dynamic hashing. Finally, I think, when using hahsing, that how to get uniform hash funciton is very important.  
+1. symbol table  
+
+## Chapter 9
+Attention: to focus on heap structure.  
+1. max & min heap  
