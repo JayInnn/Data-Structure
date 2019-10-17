@@ -68,5 +68,9 @@ Attention: in this chapter, to focus on hashing. Hashing includes static hashing
 1. symbol table  
 
 ## Chapter 9
-Attention: to focus on heap structure.  
-1. max & min heap  
+Attention: to focus on heap structure. Min-max heap & double-ended heap can support double-ended priority queue. And they can realize by array. Height-biased leftist tree, by linked list, can not only support the basic operations of double-ended priority queue, but also support combination of two double-ended priority queues. Binomial heap optimizes the height-biased leftist tree, and fibonacci heap expands binomial heap.  
+1. **min-max heap**  
+2. **deap(double-ended heap)**  
+3. **height-biased leftist tree**  
+4. **binomial heap**  
+5. **fibonacci heap**  
