@@ -74,3 +74,13 @@ Attention: to focus on heap structure. Min-max heap & double-ended heap can supp
 3. **height-biased leftist tree**  
 4. **binomial heap**  
 5. **fibonacci heap**  
+
+## Chapter 10  
+Attention: in this chapter, to pay more attention on search structure.In order to balance the height of binary tree, AVL tree, by LL & LR & RR & RL rotating, is the complete binary tree. 2-3 & 2-3-4 tree simplify the inserting and deleting operations of AVL tree. Red-black tree is the binary-tree form of 2-3-4 tree. B tree is mainly used to search elements by IO.  
+1. **AVL tree**  
+2. **2-3 & 2-3-4 tree**  
+3. **red-black tree**  
+4. **B tree**  
+5. **splay tree**  
+6. **digital search tree**  
+7. **trie**  
