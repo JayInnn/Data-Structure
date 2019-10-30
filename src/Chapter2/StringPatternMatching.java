@@ -41,7 +41,7 @@ public class StringPatternMatching {
                 j = failure[j-1] + 1;
             }
         }
-        return j < pat.length() ? -1 : i - j;
+        return j == pat.length() ? i - j : -1;
     }
 
     public static void fail(int[] failure, String pat){
@@ -50,12 +50,12 @@ public class StringPatternMatching {
         for(int j = 1; j < pat.length(); j++){
             i = failure[j-1];
             while(pat.charAt(j) != pat.charAt(i+1) && i >= 0){
-                i = failure[i-1];
+                i = failure[i];
             }
             if(pat.charAt(j) == pat.charAt(i+1)){
                 failure[j] = i + 1;
             }else {
-                failure[j] = i;
+                failure[j] = -1;
             }
         }
     }
